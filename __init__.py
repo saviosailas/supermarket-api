@@ -11,7 +11,9 @@ class Login(Resource):
 		return {"message": "GET Request is not allowded"}, 400
 	def post(self):
 		username = request.form.get("username")
-		return {"message": "login failed for {username}"}.format(username), 403
+		if username is None:
+			username = "user"
+		return {"message": "login failed for {username}".format(username=username)}, 403
 
 
 if __name__ == "__main__":
