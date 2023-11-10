@@ -11,10 +11,13 @@ class Login(Resource):
 		return {"message": "GET Request is not allowded"}, 400
 	def post(self):
 		username = request.form.get("username")
-		return {"message": "login failed"}, 403
+		return {"message": "login failed for {username}"}.format(username), 403
 
 
 if __name__ == "__main__":
 	from socket import gethostname
 	if "liveconsole" not in gethostname():
 		app.run(DEBUG=True)
+
+    
+    
