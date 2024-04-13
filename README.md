@@ -1,3 +1,4 @@
+> Archived repository :: There will be no updates
 # supermarket-api
 REST API using FlaskRestX framework 
 - Swagger UI
